@@ -1,0 +1,146 @@
+
+	a:link {
+		text-decoration: none;
+	}
+
+	.brand h1 {
+		padding: 10px;
+		color:#ffffff;
+		margin-left: 30px;
+		
+	}
+	.table h1{
+		color: #000000;
+	}
+
+	h3 {
+		margin-bottom: 30px;
+	}
+
+	h3:after {
+		width: 100px;
+		height: 2px;
+		background-color: #e65c00;
+		display: block;
+		content: "";
+		margin: 0 auto;
+		margin-top: 30px;
+	
+	}
+
+	.call {
+	margin-top: 30px;
+	}
+
+	.btn {
+		margin: 5px;
+		border: none;
+		background: #1488CC;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		
+	}
+	.nav-link {
+		margin-left: 3px;
+		margin-right: 3px;
+		padding-top: 20px;
+		color: #ffffff;
+		font-size: 15px;
+	}
+	.nav-item {
+		padding-top:  10px;
+		
+	}
+
+	.navbar-light .navbar-brand {
+		color: rgb(255, 255, 255);
+	}
+
+	.navbar{
+		margin-bottom: 20px;
+	}
+
+	/* styling for profile table */
+	.table .thead-dark th {
+		color: rgb(0, 0, 0);
+		background-color: #ffffff;
+		border-color: #ffffff;
+	}
+
+	.header {
+		background: #cc2b5e;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
+		height: 50vh;		
+		width: 100%;
+		color: #ffffff;
+
+	}
+
+	.description {
+		margin-top: 40px;
+		
+	}
+
+	.testimonial {
+		margin-top: 30px;
+		
+	}
+	
+  
+  @media (min-width: 768px) {
+	.navbar-nav {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+	}
+  
+	.navbar-nav .nav-item {
+	  -webkit-box-flex: 1;
+	  -webkit-flex: 1 0 auto;
+		  -ms-flex: 1 0 auto;
+			  flex: 1 0 auto;
+	}
+  }
+  
+  /* Responsive: Portrait tablets and up */
+  @media screen and (min-width: 768px) {
+	/* Remove the padding we set earlier */
+	.masthead,
+	.marketing,
+	.footer {
+	  padding-right: 0;
+	  padding-left: 0;
+	}
+  }
+
+  .fa {
+      margin: auto;
+      padding: 10px;
+      position: relative;
+	}
+	
+	.footer {
+		margin-top: 70px;
+		padding-top: 30px;
+		background: #000000;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		
+		
+		height: 70vh;		
+}
+
+	.footer h4 {
+		color: #587197;
+		margin-top: 30px;
+	}
+
+	#id {
+		padding-top: 30px;
+	}
+
+	input, textarea, button { margin-top:10px }
+	
+	
