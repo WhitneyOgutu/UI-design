@@ -1,7 +1,7 @@
-WeConnect
+*WeConnect*
 WeConnect provides a platform that brings businesses and individuals together. This platform creates awareness for businesses and gives the users the ability to write reviews about the businesses they have interacted with.  
 
-Features
+*Features*
 User can create create a new account
 User can log in and out of the account
 Authenticated user can create a business for users to review
