@@ -1,8 +1,5 @@
 WeConnect
-Andela Project Challage
-
-About
-WeConnect is an app that connects businesses and individuals together by creating awareness of the business and provides oppotunity for users to write reviews about the business.
+WeConnect provides a platform that brings businesses and individuals together. This platform creates awareness for businesses and gives the users the ability to write reviews about the businesses they have interacted with.  
 
 Features
 User can create create a new account

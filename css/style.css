@@ -5,7 +5,9 @@
 
 	h1 {
 		padding: 10px;
-		color:#292B2C;
+		color:#ffffff;
+		margin-left: 30px;
+		
 	}
 
 	h3 {
@@ -28,7 +30,7 @@
 	}
 
 	.btn {
-		margin: 10px;
+		margin: 20px;
 		border: none;
 		background: #1488CC;  /* fallback for old browsers */
 		background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
@@ -38,7 +40,8 @@
 	.nav-link {
 		margin-left: 3px;
 		margin-right: 3px;
-		color: black;
+		padding-top: 20px;
+		color: #ffffff;
 		font-size: 15px;
 	}
 	.nav-item {
@@ -49,14 +52,14 @@
 		background: #cc2b5e;  /* fallback for old browsers */
 		background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
-		height: 70vh;		
+		height: 50vh;		
 		width: 100%;
-		
+		color: #ffffff;
 
 	}
 
 	.description {
-		margin-top: 30px;
+		margin-top: 40px;
 		
 	}
 
@@ -101,6 +104,7 @@
 	
 	.footer {
 		margin-top: 70px;
+		padding-top: 30px;
 		background: #000000;  /* fallback for old browsers */
 		background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
