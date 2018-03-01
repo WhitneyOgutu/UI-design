@@ -3,11 +3,14 @@
 		text-decoration: none;
 	}
 
-	h1 {
+	.brand h1 {
 		padding: 10px;
 		color:#ffffff;
 		margin-left: 30px;
 		
+	}
+	.table h1{
+		color: #000000;
 	}
 
 	h3 {
@@ -48,6 +51,22 @@
 		padding-top:  10px;
 		
 	}
+
+	.navbar-light .navbar-brand {
+		color: rgb(255, 255, 255);
+	}
+
+	.navbar{
+		margin-bottom: 20px;
+	}
+
+	/* styling for profile table */
+	.table .thead-dark th {
+		color: rgb(0, 0, 0);
+		background-color: #ffffff;
+		border-color: #ffffff;
+	}
+
 	.header {
 		background: #cc2b5e;  /* fallback for old browsers */
 		background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
@@ -115,7 +134,7 @@
 
 	.footer h4 {
 		color: #587197;
-		margin-top: 40px;
+		margin-top: 30px;
 	}
 
 	#id {
