@@ -24,10 +24,16 @@ class BasicsTestCase(unittest.TestCase):
 
     def test_create_business(self):
         response = self.dummy_browser.post(
-            'api/register/business',
+            'api/businesses',
             headers={'Content-Type': 'application/json'},
             data=json.dumps(self.business_data))
         result = json.loads(response.data.decode())
         self.assertEqual(result["message"], "Business created successfully")
-        
+
+    def test_retrieve_business(self):
+        response = self.dummy_browser.get(
+            'api/businesses'
+            
+            )
+        self.assertEqual(response.status_code, 200)
    

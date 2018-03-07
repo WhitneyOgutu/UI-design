@@ -1,1 +1,3 @@
-{}
+{
+  "tests/test_api.py::BasicsTestCase::test_update_business": true
+}

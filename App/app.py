@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, make_response
+from flask import Flask, jsonify, request, make_response, json
 
 try: 
     from App.config import DevelopmentConfig, TestingConfig, ProductionConfig
@@ -39,20 +39,22 @@ def create_app(config_name):
             response = {"message": "User created successfully"}
             return (jsonify(response)), 201
 
-    @app.route('/api/register/business', methods=['GET', 'POST'])
+    @app.route('/api/businesses', methods=['GET', 'POST'])
     def register_business():
         if request.method == 'POST':
             data = request.get_json()
             businessname = data.get("businessname")
             description = data.get("description")
             location = data.get("location")
+            # new_business = Business()
             new_business = Business(businessname, description, location)
-            Businesses.append(new_business)
-            response = {"message": "Business created successfully"}
-            return (jsonify(response)), 201
-            
-            
+            Businesses.append(new_business.create_business())
+            return jsonify({"message": "Business created successfully"}), 201
+        else:
+            if request.method == 'GET':
+                return json.dumps(Businesses), 200
 
         
+                    
     return app
 
