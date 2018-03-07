@@ -8,6 +8,10 @@ class Business:
         self.location = location
 
     def create_business(self):
-       new_business ={"businessname": self.businessname, "description": self.description, "location": self.location}
+       new_business = {
+           "businessname": self.businessname, 
+           "description": self.description,
+            "location": self.location
+        }
        return new_business
 
