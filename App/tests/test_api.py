@@ -16,11 +16,21 @@ class BasicsTestCase(unittest.TestCase):
 
     def test_create_user(self):
         response = self.dummy_browser.post(
-            'api/auth/register/user',
+            'api/auth/register',
             headers={'Content-Type': 'application/json'},
             data=json.dumps(self.user_data))
         result = json.loads(response.data.decode())
         self.assertEqual(result["message"], "User created successfully")
+
+    def test_login_user(self):
+        response = self.dummy_browser.post(
+            'api/auth/login',
+            headers={'Content-Type': 'application/json'},
+            data=json.dumps(self.user_data))
+        result = json.loads(response.data.decode())
+        self.assertEqual(result["message"], "Logged in successfully")
+
+
 
     def test_create_business(self):
         response = self.dummy_browser.post(

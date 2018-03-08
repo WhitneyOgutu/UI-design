@@ -1,1 +1,3 @@
-{}
+{
+  "tests/test_api.py::BasicsTestCase::test_login_user": true
+}
