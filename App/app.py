@@ -40,6 +40,30 @@ def create_app(config_name):
             return (jsonify(response)), 201
     
     @app.route('/api/auth/login', methods=['POST'])
+    def login_user():
+        if request.method == 'POST':
+            data = request.get_json()
+            username = data.get("username")
+            password = data.get("password")
+            details = {new_user.username: new_user.password for new_user in Users}
+            if username in details.keys():
+                try:
+                    if password == details[username]:
+                        token = username
+                        response = {
+                            'message': 'You are successfully logged in',
+                            'token': token
+                        }
+                        return jsonify(response), 200
+                    # else: 
+                    #     response = {'message': 'Input correct email or password'}
+                    #     return jsonify(response), 401
+
+                except Exception:
+                    response = {'message': 'User does not exist. Proceed to register'}
+                    return jsonify(response), 500
+
+
 
     @app.route('/api/register/business', methods=['GET', 'POST'])
     def register_business():

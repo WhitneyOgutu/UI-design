@@ -28,9 +28,7 @@ class BasicsTestCase(unittest.TestCase):
             headers={'Content-Type': 'application/json'},
             data=json.dumps(self.user_data))
         result = json.loads(response.data.decode())
-        self.assertEqual(result["message"], "Logged in successfully")
-
-
+        self.assertEqual(result["message"], "You are successfully logged in")
 
     def test_create_business(self):
         response = self.dummy_browser.post(
