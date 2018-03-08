@@ -38,8 +38,7 @@ def create_app(config_name):
             Users.append(new_user)
             response = {"message": "User created successfully"}
             return (jsonify(response)), 201
-    
-    @app.route('/api/auth/login', methods=['POST'])
+
 
     @app.route('/api/register/business', methods=['GET', 'POST'])
     def register_business():
