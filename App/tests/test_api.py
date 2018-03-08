@@ -40,4 +40,10 @@ class BasicsTestCase(unittest.TestCase):
         result = json.loads(response.data.decode())
         self.assertEqual(result["message"], "Business created successfully")
         
-   
+    def test_create_review(self):
+        response = self.dummy_browser.post(
+            'api/register/business',
+            headers={'Content-Type': 'application/json'},
+            data=json.dumps(self.business_data))
+        result = json.loads(response.data.decode())
+        self.assertEqual(result["message"], "Review created successfully")
