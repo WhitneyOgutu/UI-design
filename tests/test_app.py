@@ -1,13 +1,11 @@
-import unittest
+import unittest,json
 
-import json
-
-from App.app import create_app
+from WeConnect.app import app
 
 
 class BasicsTestCase(unittest.TestCase):
     def setUp(self):
-        self.app = create_app('Testing')
+        self.app = app
         self.dummy_browser = self.app.test_client()
         
         self.user_data = {"firstname": "Whitney", "username": "Budhi", "password": "2323"}
@@ -29,6 +27,15 @@ class BasicsTestCase(unittest.TestCase):
             data=json.dumps(self.user_data))
         result = json.loads(response.data.decode())
         self.assertEqual(result["message"], "You are successfully logged in")
+     
+    def test_logout_user(self):
+        response = self.dummy_browser.post(
+            'api/auth/logout',
+            headers={'Content-Type': 'application/json'},
+            data=json.dumps(self.user_data))
+        result = json.loads(response.data.decode())
+        self.assertEqual(response.status_code, 200)
+    
 
     def test_create_business(self):
         response = self.dummy_browser.post(
@@ -37,5 +44,19 @@ class BasicsTestCase(unittest.TestCase):
             data=json.dumps(self.business_data))
         result = json.loads(response.data.decode())
         self.assertEqual(result["message"], "Business created successfully")
-        
-   
+
+    def test_get_business(self):
+        response = self.dummy_browser.get(
+            'api/register/business',
+            headers={'Content-Type': 'application/json'},
+            data=json.dumps(self.business_data))
+        result = json.loads(response.data.decode())
+        self.assertEqual(response.status_code, 200)    
+
+    def test_create_review(self):
+        response = self.dummy_browser.post(
+            'api/businesses/review',
+            headers={'Content-Type': 'application/json'},
+            data=json.dumps(self.user_data))
+        result = json.loads(response.data.decode())
+        self.assertEqual(result["message"], "Review created successfully")
