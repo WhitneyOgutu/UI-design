@@ -63,6 +63,26 @@ def create_app(config_name):
                     response = {'message': 'User does not exist. Proceed to register'}
                     return jsonify(response), 500
 
+    @app.route('/api/auth/logout', methods=['POST'])
+    def logout_user():
+        auth_header = request.headers.get('Authorization')
+        token = auth_header.split(" ")[1]
+        if token:
+            details = {new_user.username: new_user.password for new_user in Users}
+            if token in details.keys():
+                try:
+                    response = {
+                        'message': 'You are successfully logged out',
+                        'token': ''
+                    }
+                    return jsonify(response), 200
+                    # else: 
+                    #     response = {'message': 'Input correct email or password'}
+                    #     return jsonify(response), 401
+
+                except Exception:
+                    response = {'message': 'User does not exist. Proceed to register'}
+                    return jsonify(response), 500
 
 
     @app.route('/api/register/business', methods=['GET', 'POST'])
@@ -77,8 +97,5 @@ def create_app(config_name):
             response = {"message": "Business created successfully"}
             return (jsonify(response)), 201
             
-            
-
-        
     return app
 
