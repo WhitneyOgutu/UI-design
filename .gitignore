@@ -1,0 +1,5 @@
+/__pycache__
+/.pytest_cache
+/flask_api
+/models/__pycache__
+/tests/__pycache__

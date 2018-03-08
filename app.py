@@ -52,7 +52,7 @@ def create_app(config_name):
                         token = username
                         response = {
                             'message': 'You are successfully logged in',
-                            'token': token
+                            'token': token,
                         }
                         return jsonify(response), 200
                     # else: 
@@ -62,7 +62,6 @@ def create_app(config_name):
                 except Exception:
                     response = {'message': 'User does not exist. Proceed to register'}
                     return jsonify(response), 500
-
 
 
     @app.route('/api/register/business', methods=['GET', 'POST'])
@@ -77,8 +76,5 @@ def create_app(config_name):
             response = {"message": "Business created successfully"}
             return (jsonify(response)), 201
             
-            
-
-        
     return app
 
