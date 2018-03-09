@@ -1,3 +1,7 @@
+[![Coverage Status](https://coveralls.io/repos/github/WhitneyOgutu/WeConnect/badge.svg?branch=challenge_two)](https://coveralls.io/github/WhitneyOgutu/WeConnect?branch=login-feature)
+
+Github pages link - https://whitneyogutu.github.io/pages/
+
 # WeConnect
 WeConnect provides a platform that brings businesses and individuals together. This platform creates awareness for businesses and gives the users the ability to write reviews about the businesses they have interacted with.  
 
