@@ -75,7 +75,7 @@ def register_business():
         location = data.get("location")
 
         if businessname.strip() == "": 
-            return jsonify({"message": "Please input a businessname value"}), 406
+            return jsonify({"message": "Please input a businessname value"}),
         elif description.strip() == "":
             return jsonify({"message": "Please input a description value"})
         elif location.strip() == "":
@@ -86,15 +86,13 @@ def register_business():
                 return jsonify({"message": "Business already exists"})
 
         new_business = Business(businessname, description, location)
-        Businesses.append(new_business)
+        Businesses.append(new_business.create_business())
         response = {"message": "Business created successfully",
                     "Business created by": current_user
             }
         return (jsonify(response)), 201
 
-    else:
-        if request.method == 'GET':
-            return jsonify(Businesses), 200
+    return json.dumps(Businesses), 200
 
 @app.route('/api/businesses/review', methods=['GET', 'POST'])
 @jwt_required
@@ -112,12 +110,17 @@ def register_review():
                 return jsonify({"message": "Please input a description value"})
     
         new_review = Review(title, description)
-        Reviews.append(new_review)
+        Reviews.append(new_review.create_review())
         response = {"message": "Review created successfully",
                     "Business created by": current_user
             }
         return (jsonify(response)), 201
 
-    return app
+    else:
+        return json.dumps(Reviews), 200
+
+
+if __name__ == "__main__":
+    app.run()
 
 

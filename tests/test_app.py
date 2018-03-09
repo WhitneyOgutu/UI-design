@@ -9,6 +9,7 @@ class BasicsTestCase(unittest.TestCase):
         self.dummy_browser = self.app.test_client()
         
         self.user_data = {"firstname": "Whitney", "username": "Budhi", "password": "2323"}
+        self.review_data = {"title": "Feedback", "description": "good work"}
         self.business_data = {"businessname": "Nakumatt", "description": "blahblahblah", "location": "Nairobi"}
 
 
@@ -27,14 +28,6 @@ class BasicsTestCase(unittest.TestCase):
             data=json.dumps(self.user_data))
         result = json.loads(response.data.decode())
         self.assertEqual(result["message"], "You are successfully logged in")
-     
-    def test_logout_user(self):
-        response = self.dummy_browser.post(
-            'api/auth/logout',
-            headers={'Content-Type': 'application/json'},
-            data=json.dumps(self.user_data))
-        result = json.loads(response.data.decode())
-        self.assertEqual(response.status_code, 200)
     
 
     def test_create_business(self):
@@ -48,8 +41,7 @@ class BasicsTestCase(unittest.TestCase):
     def test_get_business(self):
         response = self.dummy_browser.get(
             'api/register/business',
-            headers={'Content-Type': 'application/json'},
-            data=json.dumps(self.business_data))
+            headers={'Content-Type': 'application/json'})
         result = json.loads(response.data.decode())
         self.assertEqual(response.status_code, 200)    
 
@@ -57,6 +49,6 @@ class BasicsTestCase(unittest.TestCase):
         response = self.dummy_browser.post(
             'api/businesses/review',
             headers={'Content-Type': 'application/json'},
-            data=json.dumps(self.user_data))
+            data=json.dumps(self.review_data))
         result = json.loads(response.data.decode())
         self.assertEqual(result["message"], "Review created successfully")
