@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/WhitneyOgutu/WeConnect/badge.svg?branch=challenge_two)](https://coveralls.io/github/WhitneyOgutu/WeConnect?branch=login-feature)
+[![Coverage Status](https://coveralls.io/repos/github/WhitneyOgutu/WeConnect/badge.svg?branch=challenge_two)](https://coveralls.io/github/WhitneyOgutu/WeConnect?branch=challenge_two)
 
 Github pages link - https://whitneyogutu.github.io/pages/
 
